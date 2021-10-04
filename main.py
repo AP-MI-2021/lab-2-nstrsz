@@ -64,9 +64,9 @@ def get_largest_prime_below(n):
         if is_prime(i)==True:
             return i
 def test_get_largest_prime_below():
-    assert==(get_largest_prime_below(12))==7
-    assert==(get_largest_prime_below(3))==2
-    assert==(get_largest_prime_below(25))==23
+    assert(get_largest_prime_below(12))==7
+    assert(get_largest_prime_below(3))==2
+    assert(get_largest_prime_below(25))==23
 
 shouldRun=True
 while shouldRun:
