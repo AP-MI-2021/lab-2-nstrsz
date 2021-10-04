@@ -53,10 +53,22 @@ def test_is_palindrome():
     assert(is_superpime(233))== True
     assert(is_superpime(237))== False
 
+
+def get_largest_prime_below(n):
+    '''
+    Functia returneaza ultimul numar prim mai mic decat n
+    :param n: Numarul in functie de care trebuie sa stabilesc cel mai apropiat numar prim, mai mic decat n
+    :return: ultimul numar prim mai mic decat n
+    '''
+    for i in range(n-1,1,-1):
+        if is_prime(i)==True:
+            return i
+
 shouldRun=True
 while shouldRun:
     print("1. Determinati daca un numar este palindrom:")
     print("2. Determinati daca un numar este superprim:")
+    print("3. Determinati ultimul numar prim mai mic decat n")
     print("x. Iesire")
     opt=input("Alegeti optiunea:")
     if opt=="1":
@@ -71,5 +83,8 @@ while shouldRun:
             print("Numarul dat este superprim")
         else:
             print("Numarul dat NU este superprim")
+    elif opt=="3":
+        n = int(input("Dati nr:"))
+        print(get_largest_prime_below(n))
     elif opt=="x":
         shouldRun=False
